@@ -159,12 +159,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CityController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProvinceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migration\CityProvince\201510021021267_InitialCreate.cs" />
+    <Compile Include="Migration\CityProvince\201510021021267_InitialCreate.Designer.cs">
+      <DependentUpon>201510021021267_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migration\CityProvince\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\City.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ProjectContext.cs" />
+    <Compile Include="Models\Province.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -175,6 +185,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="MigrationCommands.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -214,6 +225,16 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Province\Create.cshtml" />
+    <Content Include="Views\Province\Delete.cshtml" />
+    <Content Include="Views\Province\Details.cshtml" />
+    <Content Include="Views\Province\Edit.cshtml" />
+    <Content Include="Views\Province\Index.cshtml" />
+    <Content Include="Views\City\Create.cshtml" />
+    <Content Include="Views\City\Delete.cshtml" />
+    <Content Include="Views\City\Details.cshtml" />
+    <Content Include="Views\City\Edit.cshtml" />
+    <Content Include="Views\City\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -224,6 +245,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migration\CityProvince\201510021021267_InitialCreate.resx">
+      <DependentUpon>201510021021267_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

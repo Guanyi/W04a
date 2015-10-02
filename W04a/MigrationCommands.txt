@@ -1,0 +1,3 @@
+﻿Enable-Migrations -ContextTypeName W04a.Models.ProjectContext -MigrationsDirectory Migration\CityProvince
+Add-Migration -ConfigurationTypeName W04a.Migration.CityProvince.Configuration "InitialCreate"
+Update-Database -ConfigurationTypeName W04a.Migration.CityProvince.Configuration
